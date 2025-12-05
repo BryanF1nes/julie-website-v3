@@ -225,11 +225,15 @@ p {
    align-items: center;
    justify-content: space-between;
    margin: 0 auto;
-   gap: 2rem;
+   gap: 10rem;
 }
 
 .book-section {
    margin-bottom: 300px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5rem;
 }
 
 .book-img {
@@ -252,6 +256,7 @@ p {
    font-weight: bold;
    color: #b495f5;
    gap: 1.5rem;
+   width: 700px;
 
    h1 {
       font-size: 32px;
@@ -548,6 +553,15 @@ footer {
          cursor: pointer;
       }
    }
+}
+
+/** Book Section **/
+.book-section {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-top: 350px;
+   margin: 0 2rem;
 }
 
 .hidden {
