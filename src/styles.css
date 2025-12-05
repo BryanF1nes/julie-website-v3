@@ -218,13 +218,18 @@ p {
 }
 
 /** Book Section **/
+.homepage-book-container {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
 .book-content {
    max-width: 1200px;
    padding: 24px;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   margin: 0 auto;
    gap: 10rem;
 }
 
@@ -577,7 +582,11 @@ footer {
 @media (max-width: 768px) {
    .book-content {
       flex-direction: column;
-      gap: 2rem;
+      gap: 5rem;
+   }
+
+   .book-blurb {
+      width: 600px;
    }
 }
 
@@ -589,6 +598,10 @@ footer {
    .book-content {
       flex-direction: column;
       gap: 4rem;
+   }
+
+   .book-blurb {
+      width: 300px;
    }
 
    .book-img {
@@ -648,5 +661,19 @@ footer {
       text-align: center;
       max-width: 200px;
       font-size: 14px;
+   }
+
+   .contact-section {
+      .contact-container {
+         textarea {
+            height: 100px;
+         }
+      }
+   }
+}
+
+@media (max-width: 325px) {
+   .book-blurb {
+      width: 200px;
    }
 }

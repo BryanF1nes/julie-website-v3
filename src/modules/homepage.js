@@ -53,6 +53,7 @@ export const HomePage = (() => {
 
    const bookContent = () => {
       const bookSection = document.createElement('div');
+      bookSection.className = "homepage-book-container";
 
       bookSection.innerHTML = `
         <svg class="flipped" viewBox="0 0 1440 200" preserveAspectRatio="none">
