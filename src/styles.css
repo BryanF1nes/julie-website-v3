@@ -107,6 +107,7 @@ p {
 
     svg {
         padding-top: 100px;
+        margin-bottom: -5px;
     }
 }
 
@@ -214,7 +215,7 @@ p {
 .flipped {
     transform: scale(-1, -1);
     margin-bottom: 100px;
-    margin-top: -1px;
+    margin-top: -5px;
 }
 
 /** Book Section **/
@@ -292,6 +293,7 @@ p {
 footer {
     svg {
         padding-top: 100px;
+        margin-bottom: -5px;
     }
 }
 
@@ -621,6 +623,11 @@ footer {
     .book-content {
         gap: 8rem;
     }
+
+    .book-blurb {
+        width: 500px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -634,7 +641,7 @@ footer {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
     .banner-text {
         padding-left: 20px;
     }
