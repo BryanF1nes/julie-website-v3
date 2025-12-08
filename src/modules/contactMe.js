@@ -68,7 +68,7 @@ export const ContactMe = (() => {
 
             elementContainer.className = "element-container";
 
-            label.textContent = el.label;
+            label.innerHTML = `${el.label}<span class="required">*</span>`;
 
             let input;
             if (el.label === "Message") {

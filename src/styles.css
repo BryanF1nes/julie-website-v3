@@ -629,6 +629,10 @@ footer {
     display: none;
 }
 
+.required {
+    color: red;
+}
+
 /** Seasonal Effects **/
 #snow-canvas {
     position: fixed;
