@@ -1,0 +1,3 @@
+import "./styles.css";
+import { DisplayController } from "./modules/displayController";
+DisplayController.init();
