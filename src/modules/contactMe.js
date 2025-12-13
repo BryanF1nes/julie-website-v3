@@ -2,6 +2,7 @@ import { Header } from "./header";
 import { Footer } from "./footer";
 import { EventHandler } from "./displayController";
 import { EmailJS } from "./email";
+import { ReCAPTCHA } from "./captcha";
 
 export const ContactMe = (() => {
     const MAXLENGTH = 300;
@@ -36,6 +37,7 @@ export const ContactMe = (() => {
 
     const init = () => {
         el.content().innerHTML = "";
+
         setTimeout(() => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }, 100);
@@ -43,9 +45,11 @@ export const ContactMe = (() => {
         Header.init();
         el.content().appendChild(form());
         Footer.init();
+
         EventHandler.bindEvents();
 
         EmailJS.init()
+        ReCAPTCHA.onloadCallback();
     }
 
     const form = () => {
@@ -54,6 +58,7 @@ export const ContactMe = (() => {
         const contactHeader = document.createElement("h1");
         const emailForm = document.createElement("form");
         const submitButton = document.createElement("input");
+        const ReCaptcha = document.createElement("div");
 
         emailForm.id = "contact-form";
 
@@ -103,7 +108,13 @@ export const ContactMe = (() => {
 
         submitButton.type = "submit";
         submitButton.value = "Send"
+        submitButton.disabled = true;
+        submitButton.className = "disabled";
+        submitButton.id = "contact-submit";
 
+        ReCaptcha.id = "html-element";
+        ReCaptcha.setAttribute("data-sitekey", "6LcpfiosAAAAAP0PKx2RYX6ANB_h4plBYHQLTvJQ");
+        emailForm.appendChild(ReCaptcha);
         emailForm.appendChild(submitButton);
 
         contactContainer.appendChild(emailForm);
