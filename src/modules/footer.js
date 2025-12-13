@@ -77,7 +77,8 @@ export const Footer = (() => {
         footerCopyright.classList.add('footer-copyright');
 
         const copyrightText = document.createElement('p');
-        copyrightText.innerHTML = `&copy; Julie Ann Garnett Author | Website Built By Bryan Fines`;
+
+        copyrightText.innerHTML = `&copy; Julie Ann Garnett Author | Website Built By <a href="https://github.com/BryanF1nes" target="_blank">Bryan Fines</a>`;
 
         footerCopyright.appendChild(copyrightText);
 
